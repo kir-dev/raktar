@@ -1,11 +1,22 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      About
+      Raktárak kezelése
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-
+  <ion-list>
+    <ion-item *ngFor="let repo of repos; let i = index">
+      <ion-card>
+        <ion-card-header>
+          {{repo.num}} - {{repo.name}}
+        </ion-card-header>
+        <ion-card-content>
+          Tulajdonos: {{repo.owner}}
+        </ion-card-content>
+      </ion-card>
+    </ion-item>
+  </ion-list>
 </ion-content>
