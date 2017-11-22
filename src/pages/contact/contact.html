@@ -1,17 +1,20 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Contact
+      Tárgyak kezelése
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
   <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
     <ion-item>
-      <ion-icon name="ionic" item-start></ion-icon>
-      @ionicframework
+      <ion-label>Raktár</ion-label>
+      <ion-select [(ngModel)]="selectedRepo" interface="popover">
+        <ion-option *ngFor="let repo of repos" value="{{ repo.id }}">{{ repo.name }}</ion-option>
+      </ion-select>
     </ion-item>
+
+
   </ion-list>
 </ion-content>
